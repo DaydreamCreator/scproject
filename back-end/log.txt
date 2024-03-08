@@ -1,0 +1,51 @@
+16TH, FEB @ CEDAR
+
+mykey:
+PS C:\Users\hchen\Documents\web\webAssn1> python jwt2.py
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0ZXh0IjoiYWJjZGVmZyJ9.1JWw48qgKhi8zAp1cvsWhaol69EufR7cRnYkfGGKV2o
+
+randomKey:
+PS C:\Users\hchen\Documents\web\webAssn1> python jwt2.py
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0ZXh0IjoiYWJjZGVmZyJ9.c-Cl5hH6jh7YSFdQV_jEVEWExVa77XoSEcoP_4XjvLc
+
+
+https://sqldocs.org/sqlite/sqlite-syntax/
+
+CREATE TABLE user ( id INTEGER PRIMARY KEY, username TEXT NOT NULL UNIQUE, email TEXT, salt TEXT NOT NULL, password TEXT );
+
+
+
+CREATE TABLE user (username TEXT PRIMARY KEY, email TEXT, salt TEXT NOT NULL, password TEXT );
+  CREATE TABLE url ( id INTEGER PRIMARY KEY, urlid TEXT NOT NULL, text TEXT NOT NULL, username TEXT NOT NULL, FOREIGN KEY (username) REFERENCES user (username));
+INSERT INTO user (username, email, password) VALUES ('jane01', 'jane01@gmail.com', '123456');
+
+
+pip3 freeze > requirements.txt
+
+# https://python-adv-web-apps.readthedocs.io/en/latest/flask_db2.html#
+
+# https://docs.python.org/3/library/secrets.html#module-secrets
+
+# https://docs.python.org/3/library/base64.html
+
+# https://docs.python.org/3/library/json.html
+
+decode the Header to acquire the algorithm: https://blog.csdn.net/LC_Liangchao/article/details/122041219
+
+https://github.com/docker/awesome-compose/blob/master/flask/app/Dockerfile
+
+https://www.freecodecamp.org/news/how-to-dockerize-a-flask-app/
+
+pipreqs ./ --encoding=utf-8
+
+ docker build -t cedar3/webassn2:group16 .
+ docker image push cedar3/webassn2:group16
+
+
+ docker run -p 5000:5000 -v C:\Users\hchen\Documents\web:/app/nfs/share cedar3/webassn3:local
+compose也得同时运行
+'./nfs/share/data.db'
+
+
+
+https://stackoverflow.com/questions/44941757/sqlalchemy-exc-operationalerror-sqlite3-operationalerror-no-such-table
